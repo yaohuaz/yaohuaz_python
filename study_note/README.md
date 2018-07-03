@@ -4,3 +4,4 @@
 - [Python Basic Cheat Sheet](https://www.pythonsheets.com/notes/python-basic.html)
 - [001.inheritance](./001.inheritance/)
 - [002.argparse](./002.argparse/)
+- [003.json_and_regex](./003.json_and_regex/)

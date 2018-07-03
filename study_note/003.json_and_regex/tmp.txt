@@ -1,0 +1,6 @@
+{
+    "Replace": {
+        "[Mm]oon": "tmp",
+        "tmp\d\d": "tmp##"
+    }
+}
