@@ -5,3 +5,4 @@
 - [001.inheritance](./001.inheritance/)
 - [002.argparse](./002.argparse/)
 - [003.json_and_regex](./003.json_and_regex/)
+- [004.lambda_expression](./004.lambda_expression/)
