@@ -21,3 +21,9 @@ jacketWeather = []
 todayWeather = 
 if todayWeather in jacketWeather:
 
+Boolean Functions:
+>>>myName = 'Jenny'
+>>>if myName.isDigit():
+(isDigit() is a boolean function)
+
+Boolean operators: and, or, not
