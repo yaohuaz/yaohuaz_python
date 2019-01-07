@@ -9,8 +9,8 @@ Generally, every variable or function we create has a line on which it is create
 If that line has already run, then the scope for that variable or function has begun.
 If it hasn't, then that variable's or function's scope has not yet begun.
 
-Note that a variable's scope begins with the line on which it's created, but that means it cannot be used until the next line. 
-For example, we could not run this line of code unless a_num had already been created:
+Note that a variable's scope begins with the line on which it's created, but that means it cannot be used until the next 
+line. For example, we could not run this line of code unless a_num had already been created:
 a_num = a_num + 1
 Typically we describe the scope of a variable as starting on the line on which it's created, 
 but be careful that you're not trying to create and use the variable on the same line: 
@@ -64,12 +64,66 @@ Arguments: Values passed into parameters during a function call.
 
 Return Statement: The line of code that defines what output will be sent back at the end of a function.
 
-Keyword Parameters: A special kind of optional parameter to which the program may choose to assign an argument during a function call, 
-  or may ignore. Typically, keyword parameters have a default value that is used if it is not overridden by a function call.
+Keyword Parameters: A special kind of optional parameter to which the program may choose to assign an argument 
+  during a function call, or may ignore. 
+  Typically, keyword parameters have a default value that is used if it is not overridden by a function call.
   Keyword parameters must go after all positional parameters. Positional parameters are called "positional" specifically 
   because Python assumes the match-up between argument and parameter based on position.
-  Define keyword parameters in function declaration. The values of keyword parameters can be changed inside the function or 
-    upon calling.
+  Define keyword parameters in function declaration. The values of keyword parameters can be changed inside the function 
+      or upon calling.
   eg: print("A", "B", "C", sep = "", end = "")
       print("D", "E", "F", sep = "", end = "")
       >>>ABCDEF
+
+
+ERROR HANDLING
+
+Catching Errors: Using error handling to prevent a program from crashing when an error is encountered.
+
+Uncaught Error: An error that is not handled by error handling code, and thus usually forces the program to crash.
+
+The three main structures for exception handling in most languages are the try, catch, and finally statements:
+The Try statement marks a block of code to attempt, but in which we anticipate an error might arise.
+The Catch statement names the errors to anticipate, and marks a block of code to run if an anticipated error arises. 
+      (Python often refers to this as the Except block as well.)
+The Finally statement marks a block of code to run after the above two blocks no matter what.
+In Python, there is also an Else block for exception handling: it runs some code only if no errors arose in the Try block.
+
+Example of Try/Except:
+      1| myVar = 1 / 0
+      2| try:
+      3|     print("An error occurred!")
+      4| except:
+      5|     pass
+      6| print("Done!")
+Specify an error type makes except block handles only that specific error. 
+One try block can have multiple except blocks for different error types.
+      1| try:
+      2|     print(1 / 0)
+      3|     print("No error occurred!")
+      4| except NameError:
+      5|     print("An error occurred!")
+      6| print("Done!")
+ else block with try/except: runs only when no except block is triggered.
+      1| try:
+      2|     dividend = int(input("Enter dividend: "))
+      3|     divisor = int(input("Enter divisor: "))
+      4|     quotient = dividend / divisor
+      5| except ZeroDivisionError:
+      6|     print("We can't divide by 0!")
+      7| except ValueError:
+      8|     print("Please only enter integers!")
+      9| else:
+     10|     print("The quotient is", quotient)
+     11| print("Done!")
+     
+open(filename): Takes as input a filename and returns the file. Once returned, 
+      the file can be read line-by-line or written to, depending on the mode. 
+      Mode is set with the keyword parameter “mode”, “r” for read, “w” for write, “a” for append.
+
+close(): A method that closes the file of which it’s a member.
+
+finally block: execute whenever an error occurs or not, even there is an error not being caught by except block.
+      If uncaught errors appears, the code will crash eventually, but finally block will run some code before crash.
+      
+
