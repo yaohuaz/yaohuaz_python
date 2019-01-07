@@ -1,0 +1,5 @@
+immutable datatype in python: string, integer, boolean
+mutable datatype: list
+
+list cannot do assignment; list = list.append() is wrong. It is enough to just do [list.append()].
+For immutable dataypes, it is correct to do assignmments like [string = string + "revise"].
