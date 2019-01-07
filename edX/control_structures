@@ -27,3 +27,49 @@ Boolean Functions:
 (isDigit() is a boolean function)
 
 Boolean operators: and, or, not
+
+1| for i in range(1, 6):
+2|     j = 0
+3|     while j < i:
+4|         print(j, end = " ")
+5|         j += 1
+5|     print("")
+Note: [end = " "] means that print() will put a space after what was printed instead of starting a new line. 
+      [sep =] gives separations to elements in a print statement.
+
+continue, pass, and break:
+  continue: end current iteration and move to next iteration.
+  break: end of loop, move out of the loop.
+  pass: a place holder; Break the requirement that control structures must have code within them 
+      and skip the body of the control structure.
+        class MyClass(object):
+        def meth_a(self):
+            pass
+        def meth_b(self):
+            print "I'm meth_b"
+            
+FUNCTIONS
+Function Definition: A segment of code that creates a function, including its name, parameters, and code, 
+  to be used by other portions of a program.
+
+Parameter: A variable for which a function expects to receive a value when called,
+  whose scope is the function’s own execution.
+
+Function Header: The name and list of parameters a function expects, 
+  provided as reference to the rest of the program to use when calling the function.
+
+Function Body: The code that a function runs when called.
+
+Arguments: Values passed into parameters during a function call.
+
+Return Statement: The line of code that defines what output will be sent back at the end of a function.
+
+Keyword Parameters: A special kind of optional parameter to which the program may choose to assign an argument during a function call, 
+  or may ignore. Typically, keyword parameters have a default value that is used if it is not overridden by a function call.
+  Keyword parameters must go after all positional parameters. Positional parameters are called "positional" specifically 
+  because Python assumes the match-up between argument and parameter based on position.
+  Define keyword parameters in function declaration. The values of keyword parameters can be changed inside the function or 
+    upon calling.
+  eg: print("A", "B", "C", sep = "", end = "")
+      print("D", "E", "F", sep = "", end = "")
+      >>>ABCDEF
