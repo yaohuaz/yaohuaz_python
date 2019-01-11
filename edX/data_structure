@@ -3,3 +3,17 @@ mutable datatype: list
 
 list cannot do assignment; list = list.append() is wrong. It is enough to just do [list.append()].
 For immutable dataypes, it is correct to do assignmments like [string = string + "revise"].
+
+"Hello, world!"[1:9] → This gives "ello, wo". The slice starts at the character with index 1, 
+  and goes until (but not including) the character with index 9, and includes every character in that range.
+"Hello, world!"[1:9:2] → This gives "el,w". Like above, it starts with the character at index 1, 
+  and goes until (but not including) the character with index 9. Here, though, it includes every other character. 
+  The :2 at the end forces it to only take characters 1, 3, 5, and 7.
+"Hello, world!" [::3] → This gives "Hl r!". Leaving the first two spots blank tells it to look at the entire string, 
+  but putting :3 at the end says to only take every third character. It does so starting at the beginning, 
+  and takes the characters at indices 0, 3, 6, 9, and 12 (H, l, space, r, and !).
+  
+find(text, [start], [end]): A method of the string data type that will find the first instance of the value of 
+  text within the string calling the method. Optionally, also takes parameters start and end to mark where 
+  to search in the string. Returns -1 if text cannot be found.
+  
