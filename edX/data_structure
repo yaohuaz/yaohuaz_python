@@ -17,3 +17,31 @@ find(text, [start], [end]): A method of the string data type that will find the 
   text within the string calling the method. Optionally, also takes parameters start and end to mark where 
   to search in the string. Returns -1 if text cannot be found.
   
+String Methods:
+.split(splitter): split the string based on the splitter chosen. If a splitter appears at the end of the string, an empty string 
+  is included.
+.strip(): strip off the argument (or whitespace) before or after the string.
+.replace("A", "B"): replace A with B in the string.
+
+"JOINER".join(list): Join a list to a string with the JOINER.
+list.append(elem): append the element to the list.
+Functions on strings without actual assignment does not change the value of the string (pass by reference).
+
+
+
+Tuple: An immutable form of a list-like structure in Python.
+Lists: A mutable form of a list-like structure in Python.
+
+Tuples allow different data types within them.
+
+When printing strings, Python leaves out the quotation marks. For example, this code...
+myString = "Hello world!"
+print(myString)
+...will output Hello, world!, without any quotation marks. However, if a string is in a tuple, 
+Python will show the quotation marks. For example, this code...
+myTuple = ("Hello", "world!")
+print(myTuple)
+...will output ("Hello", "world!"). The quotation marks are included. You might also find it outputs this in slightly 
+different ways in different environments: sometimes it will use apostrophes instead of quotation marks, for example.
+
+When printing a tuple: parentheses are always included.
